@@ -4,7 +4,7 @@ import UsersListItem from "components/molecules/UsersListItem/UsersListItem";
 import { StyledList, Wrapper } from "./UsersList.styles";
 
 const UsersList = () => (
-  <Wrapper>
+  <Wrapper> 
     <StyledList>
       {users.map((userData, i) => (
         <UsersListItem index={i} key={userData.name} userData={userData} />
