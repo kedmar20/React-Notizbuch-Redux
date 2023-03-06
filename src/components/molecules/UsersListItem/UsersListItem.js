@@ -3,15 +3,18 @@ import PropTypes from "prop-types";
 import Button from "../../atoms/Button/Button";
 import { StyledAverage, StyledInfo, Wrapper } from "./UsersListItem.styles";
 
-export let averageColor;
+const showIndex = (index) => alert(`this is student #${index + 1}`);
 
-const UsersListItem = ({ userData: { average, name, attendance = "0%" } }) => (
+const UsersListItem = ({
+  index,
+  userData: { average, name, attendance = "0%" },
+}) => (
   <Wrapper>
     <StyledAverage value={average}>{average}</StyledAverage>
     <StyledInfo>
       <p>
         {name}
-        <Button />
+        <Button onClick={() => showIndex(index)} />
       </p>
       <p>attendance: {attendance}</p>
     </StyledInfo>
