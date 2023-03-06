@@ -10,7 +10,7 @@ const UsersListItem = ({
   userData: { average, name, attendance = "0%" },
 }) => (
   <Wrapper>
-    <StyledAverage value={average}>{average}</StyledAverage>
+    <StyledAverage value={average}>{average}</StyledAverage> 
     <StyledInfo>
       <p>
         {name}
