@@ -7,5 +7,5 @@ const Button = (props) => (
     <DeleteIcon />
   </StyledButton>
 );
-
+//
 export default Button;
