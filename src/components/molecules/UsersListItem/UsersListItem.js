@@ -1,19 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Button from "../../atoms/Button/Button";
-import { Wrapper } from "./UsersListItem.styles";
-import { Average2 } from "components/atoms/Average/Average";
+import { StyledAverage, StyledInfo, Wrapper } from "./UsersListItem.styles";
 
 export let averageColor;
 
-const UsersListItem = (props) => (
+const UsersListItem = ({ userData: { average, name, attendance = "0%" } }) => (
   <Wrapper>
-    <Average2 marian={props.stefek.average} />
-    <div>
-      <p>{props.stefek.name}</p>
-      <p>{props.stefek.attendance}</p>
-    </div>
-    <Button />;
+    <StyledAverage value={average}>{average}</StyledAverage>
+    <StyledInfo>
+      <p>
+        {name}
+        <Button />
+      </p>
+      <p>attendance: {attendance}</p>
+    </StyledInfo>
   </Wrapper>
 );
 
