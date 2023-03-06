@@ -16,5 +16,5 @@ export const AverageStyle = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
+//
 console.log(AverageStyle);
