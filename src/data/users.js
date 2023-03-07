@@ -3,6 +3,7 @@ export const users = [
     name: "Olga Schiefer",
     attendance: "39%",
     average: "2.3",
+    // efdfds
   },
   {
     name: "Peter Lutzger",

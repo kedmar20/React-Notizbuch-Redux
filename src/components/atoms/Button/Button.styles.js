@@ -9,7 +9,7 @@ export const StyledButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  //
   svg {
     stroke: blue;
     width: 100%;
