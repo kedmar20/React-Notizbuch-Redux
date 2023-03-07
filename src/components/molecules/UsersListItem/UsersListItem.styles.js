@@ -1,12 +1,12 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Wrapper = styled.li`
   display: flex;
   align-items: center;
   position: relative;
-  //
+
   &:not(:last-child)::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     width: 100%;
