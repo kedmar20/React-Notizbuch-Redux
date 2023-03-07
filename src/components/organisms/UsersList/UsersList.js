@@ -23,7 +23,7 @@ const UsersList = () => {
     const filteredUsers = users.filter((user) => user.name !== name);
     setUsers(filteredUsers);
   };
-
+  //
   //  mockAPI().then(data=>{
   //         this.setState({isLoading: false})  // i zaraz po załdowaniu danych zmieniamy tekst na tytuł 'UserList'
   //         this.setState({users:data})

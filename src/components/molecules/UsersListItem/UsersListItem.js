@@ -18,7 +18,7 @@ const UsersListItem = ({
     </StyledInfo>
   </Wrapper>
 );
-
+//
 UsersListItem.propTypes = {
   userData: PropTypes.shape({
     average: PropTypes.string.isRequired,
