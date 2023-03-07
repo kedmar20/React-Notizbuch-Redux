@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactComponent as DeleteIcon } from "assets/icons/icon_white.svg";
 import { StyledButton } from "./Button.styles";
-
+//propsy muszą być przekazane:
 const Button = (props) => (
   <StyledButton {...props}>
     <DeleteIcon />

@@ -1,44 +1,49 @@
-import React from "react";
-import { users } from "data/users";
+import React, { useState, useEffect } from "react"; //import 2 hooków
+import { users as usersData } from "data/users"; //zmieniamy nazwę consta aby nazywał się jakoś inaczej
 import UsersListItem from "components/molecules/UsersListItem/UsersListItem";
 import { StyledList, Wrapper } from "./UsersList.styles";
-import Button from "components/atoms/Button/Button";
 
-// const UsersList = () => (
-//   <Wrapper>
-//     <StyledList>
-//       {users.map((userData, i) => (
-//         <UsersListItem index={i} key={userData.name} userData={userData} />
-//       ))}
-//     </StyledList>
-//   </Wrapper>
-// );
+const mockAPI = (success) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (usersData) {
+        resolve([...usersData]);
+      } else {
+        reject({ message: "Error" });
+      }
+    }, 2000);
+  });
+};
 
-//Klasy, rys historyczny dot stanu:
-class UsersList extends React.Component {
-  state = {
-    isUsersList: true,
+const UsersList = () => {
+  const [users, setUsers] = useState(usersData); // stan początkowy + destrukturyzacja tablicy: const users=useState[0] oraz const setUsers=useState[1]
+  const [isLoading, setLoadingState] = useState([]); // jak wyżej
+
+  const deleteUser = (name) => {
+    const filteredUsers = users.filter((user) => user.name !== name);
+    setUsers(filteredUsers);
   };
 
-  toggleListTitle = () => {
-    this.setState((prevState) => ({
-      isUsersList: !prevState.isUsersList,
-    }));
-  };
+  //  mockAPI().then(data=>{
+  //         this.setState({isLoading: false})  // i zaraz po załdowaniu danych zmieniamy tekst na tytuł 'UserList'
+  //         this.setState({users:data})
+  //     }).catch(err=>console.log(err))
 
-  render() {
-    return (
-      <Wrapper>
-        <h1>{this.state.isUsersList ? `User's list` : "Students list"}</h1>
-        <button onClick={this.toggleListTitle}>Change title</button>
-        <StyledList>
-          {users.map((userData, i) => (
-            <UsersListItem index={i} key={userData.name} userData={userData} />
-          ))}
-        </StyledList>
-      </Wrapper>
-    );
-  }
-}
+  return (
+    <Wrapper>
+      <h1>{isLoading ? "Loading..." : "Users List"}</h1>
+      {/* //tu wyświetlamy tekst 'Loading' podczas ładowania lub tytuł po załadowaniu */}
+      <StyledList>
+        {users.map((userData) => (
+          <UsersListItem
+            deleteUser={deleteUser}
+            key={userData.name}
+            userData={userData}
+          />
+        ))}
+      </StyledList>
+    </Wrapper>
+  );
+};
 
 export default UsersList;
