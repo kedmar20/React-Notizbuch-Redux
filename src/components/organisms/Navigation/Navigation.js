@@ -1,20 +1,17 @@
 import React from "react";
 import { Wrapper, Logo, StyledLink } from "./Navigation.styles";
+import { ReactComponent as LogoBlue } from "assets/logos/logo-blue.svg";
 
 const Navigation = () => {
   return (
     <Wrapper>
       <Logo>
-        <h1>
-          Study
-          <br />
-          Buddy
-        </h1>
+        <LogoBlue />
       </Logo>
       <StyledLink to="/">Übersicht</StyledLink>
       <StyledLink to="/add-user">StudenHinzufügen</StyledLink>
-      <StyledLink to="/">Einstelungen</StyledLink>
-      <StyledLink to="/">Abmelden</StyledLink>
+      <StyledLink to="/einstelungen">Einstelungen</StyledLink>
+      <StyledLink to="/abmelden">Abmelden</StyledLink>
     </Wrapper>
   );
 };
