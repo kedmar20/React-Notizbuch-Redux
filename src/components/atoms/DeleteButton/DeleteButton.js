@@ -3,10 +3,8 @@ import { ReactComponent as DeleteIcon } from "assets/icons/delete-icon.svg";
 import { StyledButton } from "./DeleteButton.styles";
 import { UsersContext } from "providers/UsersProvider";
 
-// const DeleteButton = (props) => (
-//    <StyledButton {...props}>
 const DeleteButton = ({ name }) => {
-   const { deleteUser } = useContext(UsersContext); //
+   const { deleteUser } = useContext(UsersContext);
    return (
       <StyledButton onClick={() => deleteUser(name)}>
          <DeleteIcon />
