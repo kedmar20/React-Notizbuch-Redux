@@ -6,21 +6,25 @@ export const Wrapper = styled.nav`
    height: 100%;
    display: flex;
    flex-direction: column;
-   border-right: 2px solid ${({ theme }) => theme.colors.darkPurple};
+   border-right: 1px solid ${({ theme }) => theme.colors.lightPurple};
    justify-content: flex-start;
    padding: 30px 0;
    position: relative;
-   background-color: ${({ theme }) => theme.colors.white};
+   /* background-color: ${({ theme }) => theme.colors.white}; */
+   background-color: #4a465f;
+   grid-row: 2/3;
+   grid-column: 1/2;
 `;
 
-export const Logo = styled.div`
+export const SearchBar = styled.div`
    background-color: ${({ theme }) => theme.colors.white};
-   width: 100%;
+   width: 80%;
    padding: 15px;
    height: 90px;
    display: flex;
    justify-content: center;
    align-items: center;
+   margin: 0 auto;
    margin-bottom: 60px;
 `;
 
@@ -35,7 +39,7 @@ export const StyledLink = styled(NavLink).attrs({
    position: relative;
 
    &.active {
-      color: ${({ theme }) => theme.colors.darkPurple};
+      color: ${({ theme }) => theme.colors.lightPurple};
       &::after {
          opacity: 1;
          width: 10px;
@@ -52,6 +56,6 @@ export const StyledLink = styled(NavLink).attrs({
       transform: translateY(-50%);
       top: 50%;
       right: -20px;
-      background-color: ${({ theme }) => theme.colors.darkPurple};
+      background-color: ${({ theme }) => theme.colors.lightPurple};
    }
 `;

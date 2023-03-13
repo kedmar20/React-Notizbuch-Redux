@@ -1,31 +1,32 @@
 export const users = [
-  {
-    name: "Olga Schiefer",
-    attendance: "39%",
-    average: "1.3",
-  },
-  {
-    name: "Peter Lutzger",
-    attendance: "23%",
-    average: "3.3",
-  },
-  {
-    name: "Margareta Leber",
-    attendance: "45%",
-    average: "2.3",
-  },
-  {
-    name: "Alexander Kölble",
-    attendance: "56%",
-    average: "4.1",
-  },
-  {
-    name: "Walter Hutter",
-    attendance: "29%",
-    average: "2.4",
-  },
-  {
-    name: "Elke Dillmann",
-    average: "2.7",
-  },
+   {
+      name: "Olga Schiefer",
+      attendance: "Oberstufenlehrer",
+      average: "1.1",
+   },
+   {
+      name: "Peter Lutzger",
+      attendance: "Eurythmie",
+      average: "3.1",
+   },
+   {
+      name: "Margareta Leber",
+      attendance: "Eurythmie",
+      average: "3.1",
+   },
+   {
+      name: "Alexander Kölble",
+      attendance: "Sprachgestalter",
+      average: "1.1",
+   },
+   {
+      name: "Walter Hutter",
+      attendance: "Klassenlehrer",
+      average: "2.1",
+   },
+   {
+      name: "Elke Dillmann",
+      attendance: "Oberstufenlehrer",
+      average: "1.1",
+   },
 ];

@@ -6,13 +6,16 @@ import { StyledAverage, StyledInfo, Wrapper } from "./UsersListItem.styles";
 const UsersListItem = ({ userData: { average, name, attendance = "0%" } }) => {
    return (
       <Wrapper>
-         <StyledAverage value={average}>{average}</StyledAverage>
+         <StyledAverage value={average}>
+            <p>Semester:</p>
+            <p>{average}</p>
+         </StyledAverage>
          <StyledInfo>
             <p>
                {name}
                <DeleteButton name={name} />
             </p>
-            <p>Teilnahmefrequenz: {attendance}</p>
+            <p>Fakultät: {attendance}</p>
          </StyledInfo>
       </Wrapper>
    );

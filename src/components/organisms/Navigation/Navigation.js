@@ -1,19 +1,18 @@
 import React from "react";
-import { Wrapper, Logo, StyledLink } from "./Navigation.styles";
-import { ReactComponent as LogoBlue } from "assets/logos/logo-blue.svg";
+import { Wrapper, SearchBar, StyledLink } from "./Navigation.styles";
 
 const Navigation = () => {
-  return (
-    <Wrapper>
-      <Logo>
-        <LogoBlue />
-      </Logo>
-      <StyledLink to="/">Übersicht</StyledLink>
-      <StyledLink to="/add-user">StudenHinzufügen</StyledLink>
-      <StyledLink to="/einstelungen">Einstelungen</StyledLink>
-      <StyledLink to="/abmelden">Abmelden</StyledLink>
-    </Wrapper>
-  );
+   return (
+      <Wrapper>
+         <SearchBar />
+         <StyledLink to="/">Übersicht</StyledLink>
+         <StyledLink to="/add-user">Studenten Hinzufügen</StyledLink>
+         <StyledLink to="/fakult">Fakultäten</StyledLink>
+         <StyledLink to="/semester">Semester</StyledLink>
+         <StyledLink to="/einstellungen">Einstellungen</StyledLink>
+         <StyledLink to="/abmelden">Abmelden</StyledLink>
+      </Wrapper>
+   );
 };
 
 export default Navigation;
