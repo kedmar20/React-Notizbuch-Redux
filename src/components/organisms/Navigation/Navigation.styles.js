@@ -16,16 +16,14 @@ export const Wrapper = styled.nav`
    grid-column: 1/2;
 `;
 
-export const SearchBar = styled.div`
-   background-color: ${({ theme }) => theme.colors.white};
-   width: 80%;
-   padding: 15px;
-   height: 90px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin: 0 auto;
-   margin-bottom: 60px;
+export const StatusInfo = styled.div`
+   font-size: ${({ theme }) => theme.fontSize.l};
+   color: ${({ theme }) => theme.colors.lightGrey};
+   margin: auto 1px 1px 1px;
+
+   h4 {
+      font-size: ${({ theme }) => theme.fontSize.s};
+   }
 `;
 
 export const StyledLink = styled(NavLink).attrs({

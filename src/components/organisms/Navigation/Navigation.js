@@ -1,5 +1,6 @@
 import React from "react";
-import { Wrapper, SearchBar, StyledLink } from "./Navigation.styles";
+import { Wrapper, StyledLink, StatusInfo } from "./Navigation.styles";
+import { SearchBar } from "../SearchBar/SearchBar";
 
 const Navigation = () => {
    return (
@@ -11,6 +12,10 @@ const Navigation = () => {
          <StyledLink to="/semester">Semester</StyledLink>
          <StyledLink to="/einstellungen">Einstellungen</StyledLink>
          <StyledLink to="/abmelden">Abmelden</StyledLink>
+         <StatusInfo>
+            <p>Hallo Simon!</p>
+            <h4>Du bist angemeldet.</h4>
+         </StatusInfo>
       </Wrapper>
    );
 };

@@ -3,6 +3,7 @@ import { Wrapper } from "./MainTemplate.styles";
 import Navigation from "components/organisms/Navigation/Navigation";
 import styled from "styled-components";
 import { ReactComponent as LogoBlue } from "assets/logos/logo-blue.svg";
+import NewsSection from "../NewsSection/NewsSection";
 
 const Logo = styled.div`
    grid-row: 1/2;
@@ -17,11 +18,7 @@ const Logo = styled.div`
       height: 70%;
    }
 `;
-const News = styled.div`
-   grid-row: 2/3;
-   grid-column: 3/4;
-   color: ${({ theme }) => theme.colors.white};
-`;
+
 const Auth = styled.div`
    grid-row: 1/2;
    grid-column: 3/4;
@@ -39,11 +36,7 @@ const MainTemplate = ({ children }) => {
 
          {children}
          <Auth></Auth>
-         <News>
-            <p>Lorem Ipsum</p>
-            <p>Lorem Ipsum</p>
-            <p>Lorem Ipsum</p>
-         </News>
+         <NewsSection />
       </Wrapper>
    );
 };
