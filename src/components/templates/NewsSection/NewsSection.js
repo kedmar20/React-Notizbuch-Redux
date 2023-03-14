@@ -21,6 +21,8 @@ const NewsSection = () => {
    const [articles, setArticles] = useState([]);
    const [error, setError] = useState("");
 
+   //
+
    useEffect(() => {
       axios
          .post(
