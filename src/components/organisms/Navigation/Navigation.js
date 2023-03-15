@@ -6,7 +6,9 @@ const Navigation = () => {
    return (
       <Wrapper>
          <SearchBar />
-         <StyledLink to="/">Übersicht</StyledLink>
+         <StyledLink exact to="/group">
+            Übersicht
+         </StyledLink>
          <StyledLink to="/add-user">Studenten Hinzufügen</StyledLink>
          <StyledLink to="/fakult">Fakultäten</StyledLink>
          <StyledLink to="/semester">Semester</StyledLink>
