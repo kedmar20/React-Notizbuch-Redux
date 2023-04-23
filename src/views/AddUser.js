@@ -19,7 +19,8 @@ const initialFormState = {
 const AddUser = () => {
    const context = useContext(UsersContext);
    const { formValues, handleInputChange, handleClearForm, handleThrowError, handleToggleConsent } = useForm(initialFormState);
-
+   console.log(formValues);
+   console.log(handleInputChange);
    const handleSubmitUser = (e) => {
       e.preventDefault();
       if (formValues.consent) {
