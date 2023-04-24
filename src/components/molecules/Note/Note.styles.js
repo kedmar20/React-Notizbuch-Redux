@@ -5,17 +5,19 @@ export const NoteWrapper = styled.div`
    position: relative;
    display: flex;
    flex-direction: column;
+   justify-content: center;
+   align-items: center;
    margin-bottom: 20px;
 
    h3,
    p {
-      margin: 0;
+      margin: auto;
       color: ${({ theme }) => theme.colors.darkGrey};
    }
 `;
 
 export const StyledDeleteButton = styled(StyledButton)`
    position: absolute;
-   top: 20px;
-   left: -40px;
+   top: 15px;
+   left: -44px;
 `;

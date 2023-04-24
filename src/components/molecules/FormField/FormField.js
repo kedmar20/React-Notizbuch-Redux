@@ -7,7 +7,8 @@ import { Input } from "components/atoms/Input/Input";
 const Wrapper = styled.div`
    display: flex;
    flex-direction: column;
-   align-items: flex-start;
+   align-items: center;
+   width: 80%;
 
    ${Label} {
       margin: 10px 0;

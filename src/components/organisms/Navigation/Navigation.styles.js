@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 export const Wrapper = styled.nav`
    width: 100%;
    height: 100%;
+   max-width: 240px;
    display: flex;
    flex-direction: column;
    border-right: 1px solid ${({ theme }) => theme.colors.lightPurple};
@@ -19,10 +20,11 @@ export const Wrapper = styled.nav`
 export const StatusInfo = styled.div`
    font-size: ${({ theme }) => theme.fontSize.l};
    color: ${({ theme }) => theme.colors.lightGrey};
-   margin: auto 1px 1px 1px;
+   margin: auto 11px 21px auto;
 
    h4 {
       font-size: ${({ theme }) => theme.fontSize.s};
+      margin: auto;
    }
 `;
 

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-   /* background-color: ${({ theme }) => theme.colors.lightGrey}; */
    background-color: #4a465f;
 
    display: flex;
@@ -12,5 +11,5 @@ export const Wrapper = styled.div`
    grid-row: 2/3;
    grid-column: 2/3;
 
-   border-right: 1px solid ${({ theme }) => theme.colors.lightPurple};
+   /* border-right: 1px solid ${({ theme }) => theme.colors.lightPurple}; */
 `;
