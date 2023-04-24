@@ -11,7 +11,7 @@ const NotesWidget = () => {
 
    return (
       <Wrapper isOpen={isOpen}>
-         <WidgetHandler onClick={handleToggleWidget}>notes</WidgetHandler>
+         <WidgetHandler onClick={handleToggleWidget}>Notizen</WidgetHandler>
          {isLoading ? (
             <h3>Loading...</h3>
          ) : (

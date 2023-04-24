@@ -25,7 +25,9 @@ const Notes = () => {
             <StyledFormField {...register("content", { required: true })} isTextarea label="Content" name="content" id="content" />
             {errors.title && <span>Title is required</span>}
             {errors.content && <span>Content is required</span>}
-            <Button type="submit">Add</Button>
+            <Button type="submit" isBig>
+               Add
+            </Button>
          </FormWrapper>
          {isLoading ? (
             <h2>Loading...</h2>

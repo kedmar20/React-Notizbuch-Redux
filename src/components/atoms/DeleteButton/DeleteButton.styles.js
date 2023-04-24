@@ -7,7 +7,8 @@ export const StyledButton = styled.button`
    background-color: ${({ theme }) => theme.colors.lightGrey};
    border-radius: 50px;
    border: none;
-   color: red;
+   color: ${({ theme }) => theme.colors.darkGrey};
+   font-weight: 700;
    display: flex;
    justify-content: center;
    align-items: center;
