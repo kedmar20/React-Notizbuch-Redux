@@ -1,18 +1,10 @@
 import React from "react";
 import { Wrapper, StyledLink, StatusInfo } from "./Navigation.styles";
-import { SearchBar } from "../SearchBar/SearchBar";
 
 const Navigation = () => {
    return (
       <Wrapper>
-         <SearchBar />
-         <StyledLink exact to="/group">
-            Übersicht
-         </StyledLink>
-         <StyledLink to="/add-user">Studenten Hinzufügen</StyledLink>
-         <StyledLink to="/fakult">Fakultäten</StyledLink>
-         <StyledLink to="/semester">Semester</StyledLink>
-         <StyledLink to="/einstellungen">Einstellungen</StyledLink>
+         <StyledLink to="/notes">Notizen</StyledLink>
          <StyledLink to="/abmelden">Abmelden</StyledLink>
          <StatusInfo>
             <p>Hallo Simon!</p>

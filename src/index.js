@@ -10,12 +10,11 @@ import { worker } from "mocks/browser";
 //   </React.StrictMode>,
 //   document.getElementById('root')
 // );
-
-worker.start();
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-   <React.StrictMode>
-      <Root />
-   </React.StrictMode>
-);
+worker.start().then(() => {
+   const root = ReactDOM.createRoot(document.getElementById("root"));
+   root.render(
+      <React.StrictMode>
+         <Root />
+      </React.StrictMode>
+   );
+});
