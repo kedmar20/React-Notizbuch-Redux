@@ -10,12 +10,14 @@ const Notes = () => {
       register,
       handleSubmit,
       formState: { errors },
+      reset,
    } = useForm();
    const { data, isLoading } = useGetNotesQuery();
    const [addNote] = useAddNoteMutation();
 
    const handleAddNote = ({ title, content }) => {
       addNote({ title, content });
+      reset();
    };
 
    return (
@@ -33,6 +35,7 @@ const Notes = () => {
             <h2>Loading...</h2>
          ) : (
             <NotesWrapper>
+               {console.log(data)}
                {data.notes.length ? (
                   data.notes.map(({ title, content, id }) => <Note id={id} key={id} title={title} content={content} />)
                ) : (
