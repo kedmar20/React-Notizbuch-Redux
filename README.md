@@ -1,6 +1,14 @@
 # Notizbuch: REACT App CRA + Redux
 https://react-notizbuch-redux-production.up.railway.app/notes
+Here we have the application where you can add or delete a note. 
 
+I used Redux to manage React state. 
+
+I have my own backend through MSW (MockSerwisWorkers). 
+
+Notes are fetched via AXIOS. 
+
+I did the deployment on Railway.
 
 <br>
 <br>
